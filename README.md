@@ -1,16 +1,65 @@
-# React + Vite
+📚 Student Activity Manager (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Student Activity Manager is a simple and interactive React application that helps manage student records.
+It is designed to practice core React concepts such as state, props, conditional rendering, event handling, and component communication.
 
-Currently, two official plugins are available:
+This project allows users to add students, view details, mark active/inactive status, and delete records — all handled on the frontend without any backend or database.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Features
+✅ 1. Add New Students
 
-## React Compiler
+Users can add a student using the form.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Each student stores Name and Email.
 
-## Expanding the ESLint configuration
+Data is displayed instantly using React state.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+👁️ 2. Toggle Student Details
+
+Show/hide more information of every student.
+
+Clean UI using Bootstrap and custom components.
+
+🔄 3. Mark Status (Active / Inactive)
+
+A green/red indicator shows if the student is active or inactive.
+
+Users can change the status with a single click.
+
+❌ 4. Delete Student
+
+Removes any student from the list immediately.
+
+Uses props to call delete handlers from the parent component.
+
+📦 5. Reusable Components
+
+StudentCard component is reusable for every student item.
+
+Neat separation of logic and UI.
+
+🎨 6. Fully Responsive UI
+
+Built using Bootstrap classes.
+
+Works on mobile, tablet, and laptop screens.
+
+🧠 React Concepts Used
+
+useState for storing student list
+
+Passing props between parent and child
+
+Event handling with parameters
+
+Conditional rendering (&& operator)
+
+Dynamic styling based on status
+
+Mapping lists to generate components
+
+Component-based structure
+
+<img width="1502" height="911" alt="image" src="https://github.com/user-attachments/assets/ef0455e1-afaf-48a2-b16c-4b83e6c5697f" />
+<img width="573" height="824" alt="image" src="https://github.com/user-attachments/assets/d4f52905-6919-4f91-8cf4-ba2a7c5fce19" />
+
