@@ -1,16 +1,44 @@
-# React + Vite
+📌 Project: React WebPage (Personal React Project)
+🌐 Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React JS web application created as part of learning front-end development using modern React practices.
+It features a clean component-based structure where the main UI is controlled through the App.jsx component in the src folder. The project is initialized using Vite (as indicated by the presence of vite.config.js) and demonstrates the core functionality of a beginner-to-intermediate React app.
 
-Currently, two official plugins are available:
+This web application includes:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A modular structure with components imported by App.jsx
 
-## React Compiler
+A responsive UI styled with CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Source controlled using Git and deployed under a specific branch in GitHub
 
-## Expanding the ESLint configuration
+🔧 Technologies Used
+Technology	Purpose
+✅ React JS	Used to build UI components and application logic
+✅ Vite	Used as the build tool for development and production builds
+✅ JSX	Used for rendering HTML-like components in JavaScript
+✅ CSS	For styling and custom responsive UI
+✅ Git & GitHub	Version control & cloud repository
+📂 Folder Structure	src folder contains main logic and UI components
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🚀 Features
+
+Component-Based UI: Clean and reusable React components for each section.
+
+Responsive Design: Fully optimized for mobile, tablet, and desktop screens.
+
+Fast Performance with Vite: Super-quick development server and optimized production build.
+
+Smooth UI Interactions: Hover effects, animations, and polished modern layout.
+
+React Hooks: Uses useState, useEffect, and useRef for handling state and behavior.
+
+Organized Folder Structure: Separate folders for components, assets, and styles.
+
+Easy Deployment: Can be deployed to GitHub Pages, Netlify, or Vercel easily.
+
+Scalable Codebase: Ready for adding routing, backend APIs, or more components in the future.
+
+<img width="1910" height="902" alt="image" src="https://github.com/user-attachments/assets/cedae0eb-3b28-4da8-9dfb-7651bff62b21" />
+<img width="1903" height="911" alt="image" src="https://github.com/user-attachments/assets/86a748e0-f197-4451-a229-2d6d607be6f6" />
+
