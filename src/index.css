@@ -1,0 +1,210 @@
+  
+/* Background */
+body {
+  background: #252525 !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Card */
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 28px;
+  background: #1e1e1e;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  color: #eee;
+}
+
+/* Header */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #b9aaff;
+  letter-spacing: 1px;
+}
+
+/* Input groups */
+.input-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #cfcfcf;
+}
+
+/* Input, Select, Textarea */
+input,
+select,
+textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #2a2a2a;
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+textarea{
+  resize: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #777;
+}
+
+/* Focus Effect */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #6a5acd;
+  box-shadow: 0 0 8px rgba(106, 90, 205, 0.6);
+}
+
+/* Radio buttons */
+.radio-row {
+  display: flex;
+  gap: 18px;
+  margin-top: 5px;
+}
+
+.radio-row label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Button */
+.submit-btn {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #6a5acd, #8d7bff);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #7a6bff, #9e8eff);
+  transform: translateY(-2px);
+}
+
+.record-container {
+  background: #1e2533;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.record-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.clear-btn {
+  background: transparent;
+  border: none;
+  color: #ff6b6b;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.record-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.record-table th {
+  background: #2d3444;
+  padding: 12px;
+  text-align: left;
+  color: #d3d3d3;
+}
+
+.record-table td {
+  padding: 12px;
+  border-bottom: 1px solid #333;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  background: #2a3140;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.edit-btn {
+  color: yellow;
+}
+
+.delete-btn {
+  color: #ff6b6b;
+}
+.record-layout {
+  display: flex;
+  gap: 0px;          
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.left-panel {
+  flex: 1.2;          
+  max-width: 50rem;    
+}
+
+.right-panel {
+  flex: 1;             
+}
+
+.record-container {
+  background: #1e2533;
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  width: 50%;
+  max-height: auto;   
+}
+
