@@ -41,6 +41,10 @@ React Router DOM
 JavaScript (ES6+)
 
 Bootstrap 5
+HTML5 & CSS3
+
+Browser LocalStorage
+
 
 <img width="1477" height="606" alt="image" src="https://github.com/user-attachments/assets/e9ec84f0-d8ff-43e6-8d65-ccfae33a322a" />
 <img width="882" height="530" alt="image" src="https://github.com/user-attachments/assets/3995c3be-5231-417a-bf20-91b968c8bd1b" />
@@ -53,6 +57,3 @@ Bootstrap 5
 
 
 
-HTML5 & CSS3
-
-Browser LocalStorage
