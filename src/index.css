@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+background: #3F5EFB;
+background: linear-gradient(77deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  color: #fff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+nav {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  margin: 20px auto;
+  width: fit-content;
+  padding: 12px 24px;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #c472f7;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Forms */
+.form-label{
+  color: rgb(255, 255, 255);
+}
+.form-control,
+.form-select {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+}
+
+.form-control::placeholder {
+  color: #ccc;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: none;
+  color: #fff;
+}
+
+/* Minimal select theme fix */
+.form-select {
+  background: rgba(255, 255, 255, 0.25) !important;
+  color: #fefcff;
+  border: none;
+  border-radius: 12px;
+}
+
+.form-select option {
+  background-color: #9d4edd;
+  color: #fff;
+}
+
+
+/* Remove ALL table backgrounds */
+.table,
+.table thead,
+.table tbody,
+.table tr,
+.table th,
+.table td {
+  background: transparent !important;
+}
+
+/* Table text color */
+.table {
+  color: #2b0a3d;
+  border-collapse: collapse;
+}
+
+/* Header row (light glass look) */
+.table thead th {
+  background: rgba(255, 255, 255, 0.25) !important;
+  color: #3a0a5e;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+/* ROW & COLUMN LINES */
+.table th,
+.table td {
+  border: 1px solid rgba(255, 255, 255, 0.45) !important;
+  color: white;
+  text-align: center;
+}
+
+/* Remove bootstrap dark table vars completely */
+.table-dark {
+  --bs-table-bg: transparent !important;
+  --bs-table-striped-bg: transparent !important;
+  --bs-table-hover-bg: rgba(255, 255, 255, 0.08) !important;
+  --bs-table-border-color: rgba(251, 2, 64, 0.525) !important;
+}
+
+/* Hover effect (very subtle) */
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Avatar image */
+.table img {
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Status badge */
+.badge.bg-success {
+  background: linear-gradient(135deg, #38ef7d, #11998e) !important;
+  color: #fff;
+}
+
+/* DANGER (INACTIVE) */
+.badge.bg-danger {
+  background: linear-gradient(135deg, #ff4d6d, #d00000) !important;
+  color: #fff;
+}
+
+/* Buttons */
+.btn-modern {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  border: none;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 30px;
+}
+
+.btn-modern:hover {
+  opacity: 0.9;
+}
