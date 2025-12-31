@@ -9,11 +9,29 @@ export default function ViewEmployee() {
         setemp(updateEmp);
         localStorage.setItem("Employees Data", JSON.stringify(updateEmp));
     }
+    const handleClearAll = () => {
+    const confirmClear = window.confirm(
+        "Are you sure you want to delete all employees?"
+    );
+
+    if (confirmClear) {
+        setemp([]);
+        localStorage.removeItem("Employees Data");
+    }
+};
     return (
         <>
             <h1 className="text-center my-4 fw-bold">Employee List</h1>
 
             <div className="container">
+                 <div className="d-flex justify-content-end mb-3">
+                    <button
+                        className="btn btn-danger"
+                        onClick={handleClearAll}
+                        disabled={!emp.length} >
+                        Clear All Employees
+                    </button>
+                </div>
                 <div className="card p-3">
                     <div className="table-responsive">
                         <table className="table table-hover align-middle mb-0 ">
