@@ -1,16 +1,51 @@
-# React + Vite
+📌 Employee Management System (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Employee Management System built using ReactJS that allows users to manage employee records efficiently with advanced features like search, filter, sorting, and persistent storage using localStorage.
 
-Currently, two official plugins are available:
+🚀 Features
+🔹 Employee Management
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Add new employee records
 
-## React Compiler
+Edit existing employee details
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Delete individual employees
 
-## Expanding the ESLint configuration
+Clear all employee records
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔹 Search, Filter & Sorting
+
+🔍 Search employees by name
+
+🎯 Filter employees by Active / Inactive status
+
+🔤 Sort employees A–Z (by name)
+
+🔠 Sort employees Z–A (by name)
+
+💰 Sort by Salary: High → Low
+
+💰 Sort by Salary: Low → High
+
+🔹 Data Persistence
+
+Employee data is stored using browser localStorage
+
+Data remains available after page refresh
+
+🛠️ Tech Stack 
+
+Frontend: ReactJS (Hooks: useState, useEffect)
+
+Styling: CSS, Bootstrap
+
+State Management: React State
+
+Storage: Browser LocalStorage
+
+Version Control: Git & GitHub
+<img width="1502" height="507" alt="image" src="https://github.com/user-attachments/assets/24de7a5b-3c7f-4cef-9986-929fcbdf6c14" />
+<img width="1352" height="547" alt="image" src="https://github.com/user-attachments/assets/ae057de2-6cfe-4cf4-8231-55760bf23b02" />
+
+
+
