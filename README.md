@@ -1,16 +1,30 @@
-# React + Vite
+📌 Project Description (Template)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Task Manager — React App
 
-Currently, two official plugins are available:
+A modern and intuitive Task Manager application built with React.js that allows users to organize and track daily tasks efficiently. This project implements the core features of a productivity tool using React’s component-based architecture and state management (React hooks).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It helps learners/practitioners strengthen fundamentals like building reusable components, handling user inputs, managing state with useState / useEffect, and optionally storing data in localStorage so tasks persist after page refresh.
 
-## React Compiler
+✨ Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+➕ Add new tasks quickly using an input form
 
-## Expanding the ESLint configuration
+✔️ Mark tasks as complete
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🗑️ Delete tasks you no longer need
+
+🔁 State persistence using localStorage 
+
+📌 Clean and responsive UI for better user experience
+
+🛠️ Tech Stack
+
+React.js — UI Library
+
+JavaScript (ES6) — Logic & application behavior
+
+CSS / Tailwind / Styled Components
+<img width="615" height="545" alt="image" src="https://github.com/user-attachments/assets/1712fbc7-7c9c-4c93-a437-06b29ce0ca5e" />
+<img width="587" height="576" alt="image" src="https://github.com/user-attachments/assets/fced4cf4-9996-415a-928b-259600c4e9ff" />
+
