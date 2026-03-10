@@ -17,3 +17,7 @@ src/
  ┃ ┗ store.js          # Global Redux Store
  ┣ App.jsx             # Main Routing & Layout
  ┗ main.jsx            # Entry point
+ <img width="619" height="851" alt="image" src="https://github.com/user-attachments/assets/e0f95f8d-8669-4171-a1f9-9edd3122ef0c" />
+<img width="1756" height="893" alt="image" src="https://github.com/user-attachments/assets/b5512385-dafd-4ea6-9045-fa8c561fde76" />
+<img width="1619" height="776" alt="image" src="https://github.com/user-attachments/assets/f1f68d8e-b30d-4197-89c4-38fb6250b1c4" />
+
