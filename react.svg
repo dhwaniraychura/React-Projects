@@ -1,0 +1,28 @@
+import './App.css'
+import MovieList from './components/MovieList'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from './components/Navbar';
+import MovieSearch from './components/MovieSearch'
+import MovieDetails from './components/MovieDetails';
+import Login from './components/Login';
+import PrivateRoute from "./components/PrivateRoute";
+
+function App() {
+  return(
+    <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={
+            <PrivateRoute>
+              <MovieList />
+            </PrivateRoute>
+          } />
+          <Route path='/search' element={<MovieSearch/>}/>
+          <Route path='/movie/:id' element={<MovieDetails/>}/>
+          <Route path="/login" element={<Login/>} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+export default App;

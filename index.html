@@ -1,0 +1,43 @@
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+
+const API_KEY = "6ba5452d9dd021d773adb82a6a78c9a4";
+export const fetchMovies = createAsyncThunk(
+  "movies/fetchMovies",
+  async () => {
+    const res = await axios.get(
+      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`
+    );
+    return res.data.results;
+  }
+);
+const movieSlice = createSlice({
+  name: "movies",
+
+  initialState: {
+    movies: [],
+    loading: false,
+    error: null
+  },
+
+  reducers: {},
+
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchMovies.pending, (state) => {
+        state.loading = true;
+      })
+
+      .addCase(fetchMovies.fulfilled, (state, action) => {
+        state.loading = false;
+        state.movies = action.payload;
+      })
+
+      .addCase(fetchMovies.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      });
+  }
+});
+
+export default movieSlice.reducer;

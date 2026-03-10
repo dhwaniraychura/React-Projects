@@ -1,0 +1,73 @@
+import { useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+
+const API_KEY = "6ba5452d9dd021d773adb82a6a78c9a4";
+
+function MovieSearch() {
+  const [query, setQuery] = useState("");
+  const [movies, setMovies] = useState([]);
+
+  const searchMovies = async (value) => {
+    setQuery(value);
+    if (value.trim() === "") {
+      setMovies([]);
+      return;
+    }
+    const res = await axios.get(
+      `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${value}`
+    );
+    setMovies(res.data.results);
+  };
+
+  return (
+    <div className="container mt-5 mb-5">
+      <div className="row justify-content-center mb-5">
+        <div className="col-md-8 text-center">
+          <h2 className="fw-bold mb-4">Search the Movie Universe 🚀</h2>
+          <div className="input-group input-group-lg shadow-sm rounded-pill overflow-hidden border">
+            <span className="input-group-text bg-white border-0 ps-4">🔍</span>
+            <input
+              type="text"
+              className="form-control border-0 px-3 py-3"
+              placeholder="Type a movie name..."
+              value={query}
+              onChange={(e) => searchMovies(e.target.value)}
+              style={{ boxShadow: "none" }}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="row g-4">
+        {movies.length === 0 && query !== "" ? (
+          <div className="text-center text-muted mt-5">
+            <h4>No movies found for "{query}" 😢</h4>
+          </div>
+        ) : (
+          movies.map((movie) => (
+            <div className="col-lg-3 col-md-4 col-sm-6" key={movie.id}>
+               <Link to={`/movie/${movie.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+                <div className="card h-100 shadow-sm border-0 rounded-4 overflow-hidden" style={{ transition: "transform 0.2s" }} onMouseOver={e => e.currentTarget.style.transform = "scale(1.03)"} onMouseOut={e => e.currentTarget.style.transform = "scale(1)"}>
+                  <img
+                    src={movie.poster_path 
+                      ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` 
+                      : "https://via.placeholder.com/500x750?text=No+Image"}
+                    className="card-img-top"
+                    alt={movie.title}
+                    style={{ height: "350px", objectFit: "cover" }}
+                  />
+                  <div className="card-body bg-light text-center">
+                    <h6 className="card-title fw-bold text-truncate mb-0">{movie.title}</h6>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default MovieSearch;

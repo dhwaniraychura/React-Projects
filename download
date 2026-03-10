@@ -1,0 +1,30 @@
+import { createSlice } from "@reduxjs/toolkit";
+
+const authSlice = createSlice({
+  name: "auth",
+
+  initialState: {
+    user: null,
+    favorites: []
+  },
+
+  reducers: {
+
+    login: (state, action) => {
+      state.user = action.payload;
+    },
+
+    logout: (state) => {
+      state.user = null;
+      state.favorites = [];
+    },
+
+    addFavorite: (state, action) => {
+      state.favorites.push(action.payload);
+    }
+
+  }
+});
+
+export const { login, logout, addFavorite } = authSlice.actions;
+export default authSlice.reducer;
