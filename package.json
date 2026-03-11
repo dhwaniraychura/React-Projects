@@ -1,0 +1,40 @@
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import { ref, get, push, update, remove } from "firebase/database";
+import { db } from "../../firebase/firebaseConfig";
+
+export const fetchProducts = createAsyncThunk("inventory/fetchProducts", async (_, thunkAPI) => {
+  try {
+    const snapshot = await get(ref(db, "products"));
+    if (snapshot.exists()) {
+      return Object.entries(snapshot.val()).map(([id, data]) => ({ id, ...data }));
+    }
+    return [];
+  } catch (err) {
+    return thunkAPI.rejectWithValue(err.message);
+  }
+});
+
+export const addProduct = createAsyncThunk("inventory/addProduct", async (product, thunkAPI) => {
+  try {
+    await push(ref(db, "products"), product);
+  } catch (err) {
+    return thunkAPI.rejectWithValue(err.message);
+  }
+});
+
+export const updateProduct = createAsyncThunk("inventory/updateProduct", async ({ id, data }, thunkAPI) => {
+  try {
+    await update(ref(db, `products/${id}`), data);
+  } catch (err) {
+    return thunkAPI.rejectWithValue(err.message);
+  }
+});
+
+export const deleteProduct = createAsyncThunk("inventory/deleteProduct", async (id, thunkAPI) => {
+  try {
+    await remove(ref(db, `products/${id}`));
+    return id;
+  } catch (err) {
+    return thunkAPI.rejectWithValue(err.message);
+  }
+});
