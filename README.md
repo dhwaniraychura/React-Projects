@@ -62,6 +62,3 @@ src/
 | Styling | Custom CSS (dark theme) |
 
 
-
-# Deploy dist/ to Vercel, Firebase Hosting, or Netlify
-```
