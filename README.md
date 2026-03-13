@@ -35,27 +35,6 @@ It allows users to upload, organize, search, edit, and delete documents directly
 | Styling          | Custom CSS                 |
 | Deployment       | Vercel                     |
 
----
-
-## 📸 Screenshots
-
-### Dashboard
-
-(Add your screenshot here)
-
-### Upload Document Modal
-
-(Add your screenshot here)
-
-### File Cards Grid
-
-(Add your screenshot here)
-
-### Search & Filters
-
-(Add your screenshot here)
-
----
 
 ## 📂 Project Structure
 
