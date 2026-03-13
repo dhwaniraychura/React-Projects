@@ -11,55 +11,8 @@ A production-ready document management system built with React, Redux Toolkit, a
 npm install
 ```
 
-### 2. Configure Firebase
 
-Create a project at [Firebase Console](https://console.firebase.google.com/) and:
-- Enable **Firebase Storage**
-- Enable **Firebase Realtime Database**
-- Copy your config into `src/firebase/firebaseConfig.js`
-
-```js
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT-default-rtdb.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID",
-};
 ```
-
-### 3. Firebase Rules (for development)
-
-**Storage Rules:**
-```
-rules_version = '2';
-service firebase.storage {
-  match /b/{bucket}/o {
-    match /{allPaths=**} {
-      allow read, write: if true;
-    }
-  }
-}
-```
-
-**Realtime Database Rules:**
-```json
-{
-  "rules": {
-    ".read": true,
-    ".write": true
-  }
-}
-```
-
-### 4. Run the app
-```bash
-npm run dev
-```
-
----
 
 ## 📂 Project Structure
 
@@ -108,6 +61,7 @@ src/
 | Database | Firebase Realtime DB |
 | Styling | Custom CSS (dark theme) |
 
-npm run build
+
+
 # Deploy dist/ to Vercel, Firebase Hosting, or Netlify
 ```
