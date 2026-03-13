@@ -1,16 +1,113 @@
-# React + Vite
+# 📁 DocVault — Digital Document Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A production-ready document management system built with React, Redux Toolkit, and Firebase.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Quick Start
 
-## React Compiler
+### 1. Install dependencies
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Configure Firebase
 
-## Expanding the ESLint configuration
+Create a project at [Firebase Console](https://console.firebase.google.com/) and:
+- Enable **Firebase Storage**
+- Enable **Firebase Realtime Database**
+- Copy your config into `src/firebase/firebaseConfig.js`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```js
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  databaseURL: "https://YOUR_PROJECT-default-rtdb.firebaseio.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID",
+};
+```
+
+### 3. Firebase Rules (for development)
+
+**Storage Rules:**
+```
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if true;
+    }
+  }
+}
+```
+
+**Realtime Database Rules:**
+```json
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+```
+
+### 4. Run the app
+```bash
+npm run dev
+```
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── app/
+│    └── store.js              # Redux store
+├── features/
+│    └── fileSlice.js          # All Redux logic + Firebase thunks
+├── components/
+│    ├── UploadFile.jsx         # Upload modal with drag & drop
+│    ├── FileList.jsx           # Grid of cards
+│    ├── FileCard.jsx           # Individual file card with edit/delete
+│    └── SearchFilter.jsx       # Search + category + type filters
+├── firebase/
+│    └── firebaseConfig.js      # Firebase initialization
+├── pages/
+│    └── Dashboard.jsx          # Main dashboard layout
+├── App.jsx
+├── main.jsx
+└── index.css                   # All styles
+```
+
+---
+
+## ✅ Features
+
+- **Upload** — Drag & drop or browse, with real-time progress bar
+- **View** — Responsive card grid with file type icons
+- **Edit** — Rename, change category, add description inline
+- **Delete** — Confirmation flow before permanent deletion
+- **Search** — Instant filter by name / description
+- **Filter** — By category (Personal, Academic, Office, etc.) and type (PDF, Image)
+- **Stats** — Live counts for total files, storage, categories, weekly uploads
+- **Redux** — Full loading/error states via `createAsyncThunk`
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| UI | React 18 + Vite |
+| State | Redux Toolkit + Thunk |
+| Storage | Firebase Storage |
+| Database | Firebase Realtime DB |
+| Styling | Custom CSS (dark theme) |
+
+npm run build
+# Deploy dist/ to Vercel, Firebase Hosting, or Netlify
+```
