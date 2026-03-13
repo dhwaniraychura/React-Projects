@@ -59,6 +59,7 @@ It allows users to upload, organize, search, edit, and delete documents directly
 
 ## 📂 Project Structure
 
+```
 src
 │
 ├── app
@@ -82,6 +83,7 @@ src
 ├── App.jsx
 ├── main.jsx
 └── index.css
+```
 
 ---
 
@@ -89,7 +91,7 @@ src
 
 # Clone the repository:
 
-git clone https://github.com/yourusername/docvault.git
+git clone [https://github.com/yourusername/docvault.git](https://github.com/dhwaniraychura/React-Projects/edit/doc-vault)
 
 # Go to the project folder:
 
@@ -146,6 +148,7 @@ Then deploy easily on **Vercel**:
 ---
 
 ## 📸 Screenshot
+
 
 
 ## 💡 Why This Project Uses Firebase Realtime DB
